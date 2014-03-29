@@ -1,0 +1,1 @@
+AFunction is a abstract function

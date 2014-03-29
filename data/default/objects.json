@@ -1,652 +1,746 @@
 [
     {
-        "type"    : "view",
-        "name"    : "db_view_1",
+        "type"    : "abstract",
+        "name"    : "AFn",
         "depends" : [
-            "db_table_15",
-            "db_table_14",
-            "db_table_1"
+            "IFn"
         ]
     }, {
-        "type"    : "view",
-        "name"    : "db_view_2",
+        "type"    : "abstract",
+        "name"    : "AFunction",
         "depends" : [
-            "db_table_4",
-            "db_table_14"
+            "AFn",
+            "IObj",
+            "Comparator",
+            "Fn",
+            "Serializable"
         ]
     }, {
-        "type"    : "view",
-        "name"    : "db_view_3",
+        "type"    : "class",
+        "name"    : "Agent",
         "depends" : [
-            "db_table_5",
-            "db_table_14"
+            "ARef"
         ]
     }, {
-        "type"    : "view",
-        "name"    : "db_view_4",
+        "type"    : "abstract",
+        "name"    : "AMapEntry",
         "depends" : [
-            "db_table_10",
-            "db_table_14"
+            "APersistentVector",
+            "IMapEntry"
         ]
     }, {
-        "type"    : "view",
-        "name"    : "db_view_5",
+        "type"    : "abstract",
+        "name"    : "APersistentMap",
         "depends" : [
-            "db_table_10",
-            "db_table_14"
+            "AFn",
+            "IPersistentMap",
+            "Map",
+            "Iterable",
+            "Serializable",
+            "MapEquivalence",
+            "IHashEq"
         ]
     }, {
-        "type"    : "view",
-        "name"    : "db_view_6",
+        "type"    : "abstract",
+        "name"    : "APersistentSet",
         "depends" : [
-            "db_table_10"
+            "AFn",
+            "IPersistentSet",
+            "Collection",
+            "Set",
+            "Serializable",
+            "IHashEq"
         ]
     }, {
-        "type"    : "view",
-        "name"    : "db_view_7",
+        "type"    : "abstract",
+        "name"    : "APersistentVector",
         "depends" : [
-            "db_view_6",
-            "db_table_14"
+            "AFn",
+            "IPersistentVector",
+            "Iterable",
+            "List",
+            "RandomAccess",
+            "Comparable",
+            "Serializable",
+            "IHashEq"
         ]
     }, {
-        "type"    : "view",
-        "name"    : "db_view_8",
+        "type"    : "abstract",
+        "name"    : "ARef",
         "depends" : [
-            "db_table_15",
-            "db_table_14"
+            "AReference",
+            "IRef"
         ]
     }, {
-        "type"    : "view",
-        "name"    : "db_view_9",
+        "type"    : "abstract",
+        "name"    : "AReference",
         "depends" : [
-            "db_table_18",
-            "db_table_14"
+            "IReference"
         ]
     }, {
-        "type"    : "view",
-        "name"    : "db_view_10",
+        "type"    : "final",
+        "name"    : "ArrayChunk",
         "depends" : [
-            "db_table_18",
-            "db_table_14"
+            "IChunk",
+            "Serializable"
         ]
     }, {
-        "type"    : "view",
-        "name"    : "db_view_11",
+        "type"    : "class",
+        "name"    : "ArraySeq",
         "depends" : [
-            "db_table_24",
-            "db_table_14"
+            "ASeq",
+            "IndexedSeq",
+            "IReduce"
         ]
     }, {
-        "type"    : "view",
-        "name"    : "db_view_12",
+        "type"    : "abstract",
+        "name"    : "ASeq",
         "depends" : [
-            "db_table_28",
-            "db_table_14"
+            "Obj",
+            "ISeq",
+            "Sequential",
+            "List",
+            "Serializable",
+            "IHashEq"
         ]
     }, {
-        "type"    : "table",
-        "group"   : "Mapping",
-        "name"    : "db_table_1",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "Associative",
+        "depends" : [
+            "IPersistentCollection",
+            "ILookup"
+        ]
+    }, {
+        "type"    : "final",
+        "name"    : "Atom",
+        "depends" : [
+            "ARef"
+        ]
+    }, {
+        "type"    : "abstract",
+        "name"    : "ATransientMap",
+        "depends" : [
+            "AFn",
+            "ITransientMap"
+        ]
+    }, {
+        "type"    : "abstract",
+        "name"    : "ATransientSet",
+        "depends" : [
+            "AFn",
+            "ITransientSet"
+        ]
+    }, {
+        "type"    : "final",
+        "name"    : "BigInt",
+        "depends" : [
+            "Number",
+            "IHashEq"
+        ]
+    }, {
+        "type"    : "final",
+        "name"    : "ChunkBuffer",
+        "depends" : [
+            "Counted"
+        ]
+    }, {
+        "type"    : "final",
+        "name"    : "ChunkCons",
+        "depends" : [
+            "ASeq",
+            "IChunkedSeq"
+        ]
+    }, {
+        "type"    : "final",
+        "name"    : "Cons",
+        "depends" : [
+            "ASeq",
+            "Serializable"
+        ]
+    }, {
+        "type"    : "interface",
+        "name"    : "Counted",
+        "depends" : [
+        ]
+    }, {
+        "type"    : "class",
+        "name"    : "Delay",
+        "depends" : [
+            "IDeref",
+            "IPending"
+        ]
+    }, {
+        "type"    : "class",
+        "name"    : "EnumerationSeq",
+        "depends" : [
+            "ASeq"
+        ]
+    }, {
+        "type"    : "interface",
+        "name"    : "Fn",
+        "depends" : [
+        ]
+    }, {
+        "type"    : "class",
+        "name"    : "FnLoaderThunk",
+        "depends" : [
+            "RestFn"
+        ]
+    }, {
+        "type"    : "interface",
+        "name"    : "IBlockingDeref",
+        "depends" : [
+        ]
+    }, {
+        "type"    : "interface",
+        "name"    : "IChunk",
+        "depends" : [
+            "Indexed"
+        ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_2",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "IChunkedSeq",
+        "depends" : [
+            "ISeq",
+            "Sequential"
+        ]
+    }, {
+        "type"    : "interface",
+        "name"    : "IDeref",
+        "depends" : [
+        ]
+    }, {
+        "type"    : "interface",
+        "name"    : "IEditableCollection",
+        "depends" : [
+        ]
+    }, {
+        "type"    : "interface",
+        "name"    : "IFn",
+        "depends" : [
+            "Callable",
+            "Runnable"
+        ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_3",
+        "type"    : "interface",
+        "name"    : "IHashEq",
         "depends" : [
-            "SASProject.egp"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_4",
+        "type"    : "interface",
+        "name"    : "IKeywordLookup",
         "depends" : [
-            "SASProject.egp",
-            "db_table_3"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_5",
+        "type"    : "interface",
+        "name"    : "ILookup",
         "depends" : [
-            "db_table_7",
-            "ETL process 1"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_6",
+        "type"    : "interface",
+        "name"    : "ILookupSite",
         "depends" : [
-            "ETL process 1"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_7",
+        "type"    : "interface",
+        "name"    : "ILookupThunk",
         "depends" : [
-            "ETL process 1"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_8",
+        "type"    : "interface",
+        "name"    : "IMapEntry",
         "depends" : [
-            "query5.sql"
+            "Map.Entry"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_9",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "IMeta",
+        "depends" : [
+        ]
+    }, {
+        "type"    : "interface",
+        "name"    : "Indexed",
+        "depends" : [
+            "Counted"
+        ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_10",
+        "type"    : "interface",
+        "name"    : "IndexedSeq",
         "depends" : [
-            "db_table_12",
-            "ETL process 2"
+            "ISeq",
+            "Sequential",
+            "Counted"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_11",
+        "type"    : "interface",
+        "name"    : "IObj",
         "depends" : [
-            "ETL process 2"
+            "IMeta"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_12",
+        "type"    : "interface",
+        "name"    : "IPending",
         "depends" : [
-            "ETL process 2"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_13",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "IPersistentCollection",
+        "depends" : [
+            "Seqable"
+        ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_14",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "IPersistentList",
+        "depends" : [
+            "Sequential",
+            "IPersistentStack"
+        ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_15",
+        "type"    : "interface",
+        "name"    : "IPersistentMap",
         "depends" : [
-            "db_table_17",
-            "ETL process 3"
+            "Iterable",
+            "Associative",
+            "Counted"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_16",
+        "type"    : "interface",
+        "name"    : "IPersistentSet",
         "depends" : [
-            "ETL process 3"
+            "IPersistentCollection",
+            "Counted"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_17",
+        "type"    : "interface",
+        "name"    : "IPersistentStack",
         "depends" : [
-            "ETL process 3"
+            "IPersistentCollection"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_18",
+        "type"    : "interface",
+        "name"    : "IPersistentVector",
         "depends" : [
-            "db_table_20",
-            "ETL process 4"
+            "Associative",
+            "Sequential",
+            "IPersistentStack",
+            "Reversible",
+            "Indexed"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_19",
+        "type"    : "interface",
+        "name"    : "IProxy",
         "depends" : [
-            "ETL process 4"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_20",
+        "type"    : "interface",
+        "name"    : "IRecord",
         "depends" : [
-            "ETL process 4"
         ]
     }, {
-        "type"    : "table",
-        "group"   : "Mapping",
-        "name"    : "db_table_21",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "IReduce",
+        "depends" : [
+        ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_22",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "IRef",
+        "depends" : [
+            "IDeref"
+        ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_23",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "IReference",
+        "depends" : [
+            "IMeta"
+        ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_24",
+        "type"    : "interface",
+        "name"    : "ISeq",
         "depends" : [
-            "query6.sql"
+            "IPersistentCollection"
         ]
     }, {
-        "type"    : "table",
-        "group"   : "Mapping",
-        "name"    : "db_table_25",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "ITeratorSeq",
+        "depends" : [
+            "ASeq"
+        ]
     }, {
-        "type"    : "table",
-        "group"   : "Mapping",
-        "name"    : "db_table_26",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "ITransientAssociative",
+        "depends" : [
+            "ITransientCollection",
+            "ILookup"
+        ]
     }, {
-        "type"    : "table",
-        "group"   : "Mapping",
-        "name"    : "db_table_27",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "ITransientCollection",
+        "depends" : [
+        ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_28",
+        "type"    : "interface",
+        "name"    : "ITransientMap",
         "depends" : [
-            "db_table_30",
-            "ETL process 5"
+            "ITransientAssociative",
+            "Counted"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_29",
+        "type"    : "interface",
+        "name"    : "ITransientSet",
         "depends" : [
-            "ETL process 5"
+            "ITransientCollection",
+            "Counted"
         ]
     }, {
-        "type"    : "table",
-        "name"    : "db_table_30",
+        "type"    : "interface",
+        "name"    : "ITransientVector",
         "depends" : [
-            "ETL process 5"
+            "ITransientAssociative",
+            "Indexed"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Management",
-        "name"    : "query1.sql",
+        "type"    : "interface",
+        "name"    : "IType",
         "depends" : [
-            "db_table_9",
-            "db_table_23",
-            "db_table_22"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data1",
-        "name"    : "query2.sql",
+        "type"    : "interface",
+        "name"    : "ITeratorSeq",
         "depends" : [
-            "db_table_4"
+            "ASeq"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data1",
-        "name"    : "query3.sql",
+        "type"    : "class",
+        "name"    : "Keyword",
         "depends" : [
-            "db_table_4"
+            "IFn",
+            "Comparable",
+            "Named",
+            "Serializable",
+            "IHashEq"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data1",
-        "name"    : "query4.sql",
+        "type"    : "final",
+        "name"    : "KeywordLookupSite",
         "depends" : [
-            "db_table_4"
+            "ILookupSite",
+            "ILookupThunk"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Miscellaneous",
-        "name"    : "query5.sql",
+        "type"    : "class",
+        "name"    : "LazilyPersistentVector",
         "depends" : [
-            "db_view_9",
-            "db_table_14"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Miscellaneous",
-        "name"    : "query6.sql",
+        "type"    : "final",
+        "name"    : "LazySeq",
         "depends" : [
-            "db_view_12",
-            "db_table_25",
-            "db_table_26",
-            "db_table_27",
-            "db_view_9",
-            "db_table_14"
+            "Obj",
+            "ISeq",
+            "Sequential",
+            "List",
+            "IPending",
+            "IHashEq"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query7.sql",
+        "type"    : "class",
+        "name"    : "MapEntry",
         "depends" : [
-            "db_view_4",
-            "db_view_9"
+            "AMapEntry"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query8.sql",
+        "type"    : "interface",
+        "name"    : "MapEquivalence",
         "depends" : [
-            "db_view_9"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query9.sql",
+        "type"    : "class",
+        "name"    : "MultiFn",
         "depends" : [
-            "db_view_9",
-            "db_view_4",
-            "db_view_2",
-            "db_view_7",
-            "db_table_18"
+            "AFn"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query10.sql",
+        "type"    : "interface",
+        "name"    : "Named",
         "depends" : [
-            "db_table_2",
-            "db_table_14"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query11.sql",
+        "type"    : "class",
+        "name"    : "Namespace",
         "depends" : [
-            "db_view_2"
+            "AReference",
+            "Serializable"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query12.sql",
+        "type"    : "abstract",
+        "name"    : "Obj",
         "depends" : [
-            "db_view_3"
+            "IObj",
+            "Serializable"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query13.sql",
+        "type"    : "class",
+        "name"    : "PersistentArrayMap",
         "depends" : [
-            "db_view_4"
+            "APersistentMap",
+            "IObj",
+            "IEditableCollection"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query14.sql",
+        "type"    : "class",
+        "name"    : "PersistentHashMap",
         "depends" : [
-            "db_view_9"
+            "APersistentMap",
+            "IObj",
+            "IEditableCollection"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query15.sql",
+        "type"    : "class",
+        "name"    : "PersistentHashSet",
         "depends" : [
-            "db_view_9"
+            "APersistentSet",
+            "IObj",
+            "IEditableCollection"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query16.sql",
+        "type"    : "class",
+        "name"    : "PersistentList",
         "depends" : [
-            "db_view_11",
-            "db_table_27"
+            "ASeq",
+            "IPersistentList",
+            "IReduce",
+            "List",
+            "Counted"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query17.sql",
+        "type"    : "class",
+        "name"    : "PersistentQueue",
         "depends" : [
-            "db_view_7"
+            "Obj",
+            "IPersistentList",
+            "Collection",
+            "Counted",
+            "IHashEq"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query18.sql",
+        "type"    : "class",
+        "name"    : "PersistentStructMap",
         "depends" : [
-            "db_table_18",
-            "db_table_13",
-            "db_table_14",
-            "db_view_9"
+            "APersistentMap",
+            "IObj"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query19.sql",
+        "type"    : "class",
+        "name"    : "PersistentTreeMap",
         "depends" : [
-            "db_table_18",
-            "db_table_13",
-            "db_table_14",
-            "db_table_8"
+            "APersistentMap",
+            "IObj",
+            "Reversible",
+            "Sorted"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query20.sql",
+        "type"    : "class",
+        "name"    : "PersistentTreeSet",
         "depends" : [
-            "db_view_9",
-            "db_view_10",
-            "db_table_14"
+            "APersistentSet",
+            "IObj",
+            "Reversible",
+            "Sorted"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query21.sql",
+        "type"    : "class",
+        "name"    : "PersistentVector",
         "depends" : [
-            "db_view_9",
-            "db_view_10",
-            "db_table_14"
+            "APersistentVector",
+            "IObj",
+            "IEditableCollection"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data2",
-        "name"    : "query22.sql",
+        "type"    : "class",
+        "name"    : "Range",
         "depends" : [
-            "db_view_4",
-            "db_view_5",
-            "db_table_14"
+            "ASeq",
+            "IReduce",
+            "Counted"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data3",
-        "name"    : "query23.sql",
+        "type"    : "class",
+        "name"    : "Ratio",
         "depends" : [
-            "db_table_15",
-            "db_table_14"
+            "Number",
+            "Comparable"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Data4",
-        "name"    : "query24.sql",
+        "type"    : "class",
+        "name"    : "Reduced",
         "depends" : [
-            "db_table_28",
-            "db_table_14"
+            "IDeref"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Validation",
-        "name"    : "query25.sql",
+        "type"    : "class",
+        "name"    : "Ref",
         "depends" : [
-            "db_view_9"
+            "ARef",
+            "IFn",
+            "Comparable",
+            "IRef"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Validation",
-        "name"    : "query26.sql",
+        "type"    : "abstract",
+        "name"    : "RestFn",
         "depends" : [
-            "db_view_9"
+            "AFunction"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Validation",
-        "name"    : "query27.sql",
+        "type"    : "interface",
+        "name"    : "Reversible",
         "depends" : [
-            "db_view_8"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Validation",
-        "name"    : "query28.sql",
+        "type"    : "interface",
+        "name"    : "Seqable",
         "depends" : [
-            "db_view_3"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Validation",
-        "name"    : "query29.sql",
+        "type"    : "class",
+        "name"    : "Enumeration",
         "depends" : [
-            "db_view_11"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Validation",
-        "name"    : "query30.sql",
+        "type"    : "class",
+        "name"    : "SeqIterator",
         "depends" : [
-            "db_view_12"
+            "Iterator"
         ]
     }, {
-        "type"    : "query",
-        "group"   : "Validation",
-        "name"    : "query31.sql",
+        "type"    : "interface",
+        "name"    : "Sequential",
         "depends" : [
-            "db_view_9",
-            "db_view_8",
-            "db_table_21",
-            "db_table_14",
-            "db_table_13"
         ]
     }, {
-        "type"    : "sas",
-        "name"    : "SASProject.egp",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "Settable",
+        "depends" : [
+        ]
     }, {
-        "type"    : "extract",
-        "name"    : "ETL process 1",
-        "depends" : []
+        "type"    : "interface",
+        "name"    : "Sorted",
+        "depends" : [
+        ]
     }, {
-        "type"    : "extract",
-        "name"    : "ETL process 2",
-        "depends" : []
+        "type"    : "class",
+        "name"    : "StringSeq",
+        "depends" : [
+            "ASeq",
+            "IndexedSeq"
+        ]
     }, {
-        "type"    : "extract",
-        "name"    : "ETL process 3",
-        "depends" : []
+        "type"    : "class",
+        "name"    : "Symbol",
+        "depends" : [
+            "AFn",
+            "IObj",
+            "Comparable",
+            "Named",
+            "Serializable",
+            "IHashEq"
+        ]
     }, {
-        "type"    : "extract",
-        "name"    : "ETL process 4",
-        "depends" : []
+        "type"    : "class",
+        "name"    : "TransactionalHashMap",
+        "depends" : [
+            "AbstractMap",
+            "ConcurrentMap"
+        ]
     }, {
-        "type"    : "extract",
-        "name"    : "ETL process 5",
-        "depends" : []
+        "type"    : "final",
+        "name"    : "Var",
+        "depends" : [
+            "ARef",
+            "IFn",
+            "IRef",
+            "Settable"
+        ]
+
     }, {
-        "type"    : "database",
-        "name"    : "Data store 1",
+        "type"    : "interface",
+        "name"    : "ConcurrentMap",
         "depends" : [
-            "query2.sql",
-            "query3.sql",
-            "query4.sql"
         ]
     }, {
-        "type"    : "database",
-        "name"    : "Data store 2",
+        "type"    : "interface",
+        "name"    : "RandomAccess",
         "depends" : [
-            "query7.sql",
-            "query8.sql",
-            "query9.sql",
-            "query10.sql",
-            "query11.sql",
-            "query12.sql",
-            "query13.sql",
-            "query14.sql",
-            "query15.sql",
-            "query16.sql",
-            "query17.sql",
-            "query18.sql",
-            "query19.sql",
-            "query20.sql",
-            "query21.sql",
-            "query22.sql"
         ]
     }, {
-        "type"    : "database",
-        "name"    : "Data store 3",
+        "type"    : "interface",
+        "name"    : "Map.Entry",
         "depends" : [
-            "query23.sql"
         ]
     }, {
-        "type"    : "database",
-        "name"    : "Data store 4",
+        "type"    : "interface",
+        "name"    : "Iterator",
         "depends" : [
-            "query24.sql"
         ]
     }, {
-        "type"    : "report",
-        "group"   : "Intermediate",
-        "name"    : "Intermediate step 1",
+        "type"    : "abstract",
+        "name"    : "AbstractMap",
         "depends" : [
-            "Data store 1"
         ]
     }, {
-        "type"    : "report",
-        "group"   : "Intermediate",
-        "name"    : "Intermediate step 2",
+        "type"    : "interface",
+        "name"    : "Map",
         "depends" : [
-            "Data store 1"
         ]
     }, {
-        "type"    : "report",
-        "name"    : "Report 1",
+        "type"    : "interface",
+        "name"    : "Set",
         "depends" : [
-            "Data store 2"
         ]
     }, {
-        "type"    : "report",
-        "name"    : "Report 2",
+        "type"    : "interface",
+        "name"    : "List",
         "depends" : [
-            "Data store 2"
         ]
     }, {
-        "type"    : "report",
-        "name"    : "Report 3",
+        "type"    : "interface",
+        "name"    : "Collection",
         "depends" : [
-            "Data store 2"
         ]
     }, {
-        "type"    : "report",
-        "name"    : "Report 4",
+        "type"    : "interface",
+        "name"    : "Iterable",
         "depends" : [
-            "Data store 2"
         ]
     }, {
-        "type"    : "report",
-        "name"    : "Report 5",
+        "type"    : "interface",
+        "name"    : "Comparable",
         "depends" : [
-            "Data store 3",
-            "Intermediate step 2"
         ]
     }, {
-        "type"    : "report",
-        "group"   : "Intermediate",
-        "name"    : "Intermediate step 3",
+        "type"    : "interface",
+        "name"    : "Comparator",
         "depends" : [
-            "Report 5",
-            "Data store 1"
         ]
     }, {
-        "type"    : "report",
-        "name"    : "Report 6",
+        "type"    : "interface",
+        "name"    : "Number",
         "depends" : [
-            "Data store 4",
-            "Intermediate step 1"
         ]
     }, {
-        "type"    : "report",
-        "group"   : "Reporting",
-        "name"    : "Upstream report 1",
+        "type"    : "interface",
+        "name"    : "Callable",
         "depends" : [
-            "Data store 2"
         ]
     }, {
-        "type"    : "report",
-        "group"   : "Reporting",
-        "name"    : "Upstream report 2",
+        "type"    : "interface",
+        "name"    : "Runnable",
         "depends" : [
-            "Data store 2"
         ]
     }, {
-        "type"    : "report",
-        "group"   : "Reporting",
-        "name"    : "Upstream report 3",
+        "type"    : "interface",
+        "name"    : "Serializable",
         "depends" : [
-            "Data store 2"
         ]
     }
 ]

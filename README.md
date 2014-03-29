@@ -1,29 +1,16 @@
-# d3 process map
+# clojure.lang.\* hierarchy
 
-This is a PHP web application that displays a directed acyclic graph in a
-modern web browser using [d3.js](http://d3js.org/).  It is designed for
-illustrating the relationships between objects in a process.
+This is a forked repository of [d3 process map](https://github.com/nylen/d3-process-map).
+It is changed for illustrating the class hierarchy in `clojure.lang.*`.
 
-### Examples
+### Need help
 
-#### Data manipulation and reporting process:
-
-
-[![Default dataset](http://nylen.tv/d3-process-map/img/thumb-default.png)](http://nylen.tv/d3-process-map/)
-http://nylen.tv/d3-process-map/
-
-#### Co-occurrences of Les Miserables characters:
-
-[![Les Mis dataset](http://nylen.tv/d3-process-map/img/thumb-les-mis.png)](http://nylen.tv/d3-process-map/?dataset=les-mis)
-http://nylen.tv/d3-process-map/?dataset=les-mis
-
-### Features
-
-* Hover over a node to see that object's relationships.  (Unrelated objects and
-  links will be made partially transparent.)
-* Click on a node to show the documentation for that object.
-* Click the "View list" button to view the documentation for all objects (good
-  for printing).
+This repo only contains hierarchy in `clojure.lang.*` currently, but "d3 process map"
+could also support the documentation for each node, see
+[README](https://github.com/nylen/d3-process-map/blob/master/README.md)
+in "d3 procress map", you can contribute by adding more documentation like methods
+description or class description like
+[this](https://github.com/xudifsd/d3-process-map/blob/master/data/default/AFunction.mkdn).
 
 ### Data format
 
